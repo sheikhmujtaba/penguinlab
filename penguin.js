@@ -62,13 +62,13 @@ var GetImage = function(penguins)
         .append("td")
         .text(function(penguins)
         {
-           var finalgrade = d3.mean(penguins.quizes, getGrade)*.2 + d3.mean(penguins.homework, getGrade)*.15 + d3.mean(penguins.test, getGrade)*.3 + penguins.final[0].grade*.35
+           var finalgrade = d3.mean(penguins.quizes, getGrade)*2 + d3.mean(penguins.homework, getGrade)*.3 + d3.mean(penguins.test, getGrade)*.3 + penguins.final[0].grade*.35
          
          return finalgrade
         })
              .style("background-color",function(penguins)
     {
-         var finalgrade = d3.mean(penguins.quizes, getGrade)*.2 + d3.mean(penguins.homework, getGrade)*.15 + d3.mean(penguins.test, getGrade)*.3 + penguins.final[0].grade*.35
+         var finalgrade = d3.mean(penguins.quizes, getGrade)*2 + d3.mean(penguins.homework, getGrade)*.3 + d3.mean(penguins.test, getGrade)*.3 + penguins.final[0].grade*.35
          
          
     if(finalgrade < 70)
